@@ -30,14 +30,16 @@
         
         <p>Sa peinture, parfois influencée par Gustave Courbet, Paul Cézanne, ou Jean Hugo, se distingue des exigences du monde de l’art médiatisé. Elle propose des instants suspendus : ceux de l’errance sur les chemins de terre, de la contemplation des pics, et du temps qui passe. De la simplicité de ses œuvres transpirent la sensibilité et l’humanité de l’artiste.</p>
 
-        <!-- Chatbox pour interagir avec l'artiste -->
-        <div class="chatbox">
-            <h2>Dialoguez avec l'artiste</h2>
-            <div class="messages" id="messages"></div>
-            <input type="text" id="userInput" placeholder="Écrivez un message...">
-            <button onclick="sendMessage()">Envoyer</button>
+       <!-- Chatbot section -->
+    <div class="chatbot">
+        <h2>Dialoguez avec Gérard</h2>
+        <div class="chatbox-messages" id="messages">
+            <!-- Les messages du chatbot apparaîtront ici -->
         </div>
-    </section>
+        <input type="text" id="userInput" placeholder="Écrivez votre question..." />
+        <button onclick="sendMessage()">Envoyer</button>
+    </div>
+
+    <script src="chatbot.js" defer></script>
 </body>
 </html>
-Suggestions de style
