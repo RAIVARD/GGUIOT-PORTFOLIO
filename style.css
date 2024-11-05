@@ -88,55 +88,70 @@ header h1 {
 .prev-button:hover {
     background-color: rgba(255, 255, 255, 0.5);
 }
-/* Style pour la section À propos */
-.about-section {
-    width: 80%;
-    margin: 20px auto;
+
+/* Conteneur centré pour la section À propos */
+.about-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 80vh;
     padding: 20px;
-    color: #fff;
+}
+
+/* Rectangle élégant pour le texte À propos */
+.about-box {
+    width: 60%;
     background-color: #111;
-    border-radius: 8px;
-    line-height: 1.6;
+    padding: 30px;
+    border-radius: 10px;
+    color: #fff;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3);
     font-family: 'Georgia', serif;
+    line-height: 1.6;
 }
 
-.about-section h1 {
-    font-size: 2.2em;
-    margin-bottom: 15px;
+.about-box h1 {
+    font-size: 2em;
     color: #f1c40f; /* Couleur personnalisée pour le titre */
+    margin-bottom: 20px;
 }
 
-.about-section p {
+.about-box p {
     font-size: 1.1em;
     margin-bottom: 15px;
 }
 
-/* Style de la chatbox */
+/* Positionnement de la chatbox en bas à droite */
 .chatbox {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
     background-color: #333;
-    padding: 20px;
-    margin-top: 20px;
+    color: #fff;
+    padding: 15px;
+    width: 300px;
     border-radius: 8px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3);
 }
 
 .chatbox h2 {
-    font-size: 1.5em;
+    font-size: 1.3em;
     margin-bottom: 10px;
     color: #f1c40f;
 }
 
 .messages {
-    height: 150px;
+    height: 100px;
     overflow-y: auto;
     background-color: #222;
     padding: 10px;
-    margin-bottom: 10px;
     border-radius: 4px;
+    margin-bottom: 10px;
     color: #fff;
 }
 
 #userInput {
-    width: 70%;
+    width: calc(100% - 60px);
     padding: 8px;
     border: none;
     border-radius: 4px;
@@ -144,7 +159,7 @@ header h1 {
 }
 
 button {
-    padding: 8px 12px;
+    padding: 8px;
     border: none;
     background-color: #f1c40f;
     color: #111;
