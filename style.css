@@ -1,164 +1,104 @@
-/* Fond noir */
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>À propos de l'artiste</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <a href="votre_fichier.pdf" target="_blank">📄</a> <!-- Icône PDF cliquable -->
+        </div>
+        <nav>
+            <a href="#home">Accueil</a>
+            <a href="#works">Œuvres</a>
+            <a href="#about">À propos</a>
+            <a href="#contact">Contact</a>
+        </nav>
+    </header>
+
+    <main class="about-section">
+        <h1>À propos de l'artiste</h1>
+        <p>Biographie courte de l'artiste, avec une présentation des influences, du parcours et des projets artistiques. Ce texte permet de mieux comprendre la démarche de l'artiste et ses œuvres.</p>
+        <button>En savoir plus</button>
+    </main>
+
+    <div class="chatbot">
+        <div class="chat-icon">💬</div>
+    </div>
+</body>
+</html>
+/* Global styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
 body {
     background-color: #000;
     color: #fff;
-    font-family: 'Georgia', serif;
-    text-align: center;
-    margin: 0;
-    padding: 0;
-}
-
-/* Style de la barre de navigation */
-nav {
+    font-family: Arial, sans-serif;
     display: flex;
-    justify-content: center;
-    gap: 10px;
-    background-color: #222;
-    padding: 10px;
+    flex-direction: column;
+    min-height: 100vh;
 }
 
-nav a {
-    color: #fff;
-    text-decoration: none;
-    font-size: 1.2em;
-    font-family: 'Arial', sans-serif;
-}
-
-nav a:hover {
-    color: #ddd;
-}
-
-/* Titre principal */
-header h1 {
-    font-size: 2.5em;
-    font-weight: bold;
-    letter-spacing: 1px;
-    margin: 20px 0;
-    color: #fff;
-    text-transform: uppercase;
-}
-
-/* Style du carrousel */
-.carousel {
-    position: relative;
-    width: 100%;
-    max-width: 800px;
-    margin: 20px auto;
-    overflow: hidden;
-}
-
-.carousel-image {
-    width: 100%;
-    height: 80vh; /* Prend une grande partie de l'écran */
-    object-fit: cover;
-    display: none;
-    opacity: 0;
-    transition: opacity 1s ease-in-out; /* Transition d'1 seconde pour un fondu */
-}
-
-.carousel-image.active {
-    display: block;
-    opacity: 1;
-}
-
-/* Style des boutons de navigation */
-.next-button,
-.prev-button {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    background-color: rgba(255, 255, 255, 0.3);
-    border: none;
-    color: #fff;
-    font-size: 2em;
-    cursor: pointer;
-    padding: 5px 15px;
-    transition: background-color 0.3s;
-}
-
-.next-button {
-    right: 10px;
-}
-
-.prev-button {
-    left: 10px;
-}
-
-.next-button:hover,
-.prev-button:hover {
-    background-color: rgba(255, 255, 255, 0.5);
-}
-
-/* Conteneur centré pour la section À propos */
-.about-container {
+/* Header */
+header {
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
-    min-height: 80vh;
     padding: 20px;
 }
 
-/* Rectangle élégant pour le texte À propos */
-.about-box {
-    width: 33%; /* Réduit la largeur à environ 1/3 de la page */
-    background-color: #111;
-    padding: 30px;
-    border-radius: 10px;
-    color: #fff;
-    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3);
-    font-family: 'Georgia', serif;
-    line-height: 1.6;
-    text-align: center; /* Centre le texte à l'intérieur */
+.logo {
+    font-size: 1.5em;
 }
 
-.about-box h1 {
+.logo a {
+    text-decoration: none;
+    color: #fff;
     font-size: 2em;
-    color: #f1c40f; /* Couleur personnalisée pour le titre */
+}
+
+nav a {
+    margin-left: 20px;
+    color: #fff;
+    text-decoration: none;
+    font-weight: 300;
+}
+
+nav a:hover {
+    text-decoration: underline;
+}
+
+/* Main Section (About Section) */
+.about-section {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start; /* Align text to the left */
+    justify-content: center; /* Center vertically */
+    padding: 50px;
+    max-width: 600px;
+    margin: auto; /* Center the block horizontally */
+}
+
+.about-section h1 {
+    font-size: 2.5em;
     margin-bottom: 20px;
 }
 
-.about-box p {
+.about-section p {
     font-size: 1.1em;
-    margin-bottom: 15px;
+    line-height: 1.6;
+    margin-bottom: 20px; /* Space between paragraph and button */
 }
 
-/* Style de la chatbox */
-.chatbot {
-    position: fixed;
-    bottom: 20px;
-    right: 20px;
-    background-color: #333;
-    color: #fff;
-    padding: 15px;
-    width: 300px;
-    border-radius: 8px;
-    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3);
-    font-family: 'Arial', sans-serif;
-}
-
-.chatbot h2 {
-    font-size: 1.3em;
-    color: #f1c40f;
-    margin-bottom: 10px;
-}
-
-.chatbox-messages {
-    height: 150px;
-    overflow-y: auto;
-    background-color: #222;
-    padding: 10px;
-    border-radius: 4px;
-    margin-bottom: 10px;
-}
-
-#userInput {
-    width: calc(100% - 60px);
-    padding: 8px;
-    border: none;
-    border-radius: 4px;
-    margin-right: 5px;
-}
-
+/* Button Style */
 button {
     padding: 8px;
     border: none;
@@ -166,8 +106,35 @@ button {
     color: #111;
     border-radius: 4px;
     cursor: pointer;
+    margin-right: 5px; /* Adds space to the right of the button */
 }
 
 button:hover {
     background-color: #ffda79;
+}
+
+/* Chatbot */
+.chatbot {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #444;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0px 0px 10px rgba(255, 255, 255, 0.5);
+    cursor: pointer;
+    transition: box-shadow 0.3s;
+}
+
+.chatbot:hover {
+    box-shadow: 0px 0px 15px rgba(255, 255, 255, 0.8);
+}
+
+.chat-icon {
+    font-size: 1.5em;
+    color: #fff;
 }
