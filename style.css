@@ -52,12 +52,19 @@ header h1 {
     height: 80vh; /* Prend une grande partie de l'écran */
     object-fit: cover;
     display: none;
+    opacity: 0;
+    transition: opacity 1s ease-in-out; /* Transition d'1 seconde pour un fondu */
 }
 
-/* Style du bouton suivant (flèche) */
-.next-button {
+.carousel-image.active {
+    display: block;
+    opacity: 1;
+}
+
+/* Style des boutons de navigation */
+.next-button,
+.prev-button {
     position: absolute;
-    right: 10px;
     top: 50%;
     transform: translateY(-50%);
     background-color: rgba(255, 255, 255, 0.3);
@@ -65,9 +72,19 @@ header h1 {
     color: #fff;
     font-size: 2em;
     cursor: pointer;
-    padding: 5px 10px;
+    padding: 5px 15px;
+    transition: background-color 0.3s;
 }
 
-.next-button:hover {
+.next-button {
+    right: 10px;
+}
+
+.prev-button {
+    left: 10px;
+}
+
+.next-button:hover,
+.prev-button:hover {
     background-color: rgba(255, 255, 255, 0.5);
 }
