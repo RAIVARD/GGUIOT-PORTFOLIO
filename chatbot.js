@@ -28,11 +28,11 @@ function sendMessage() {
     } else if (userInput.toLowerCase().includes("cours") || userInput.toLowerCase().includes("enseignement")) {
         responseMessage.textContent = "Artiste : Je propose des cours de peinture de temps en temps, principalement axés sur l'exploration des couleurs et la composition.";
     } else if (userInput.toLowerCase().includes("prix") || userInput.toLowerCase().includes("achat")) {
-        responseMessage.textContent = "Artiste : Mes œuvres sont disponibles à la vente. Pour plus de détails, vous pouvez me contacter par email, gghenri@hotmail.fr";
+        responseMessage.textContent = "Artiste : Mes œuvres sont disponibles à la vente. Pour plus de détails, vous pouvez me contacter directement.";
     } else if (userInput.toLowerCase().includes("influence") || userInput.toLowerCase().includes("influences")) {
         responseMessage.textContent = "Artiste : Je suis influencé par des artistes comme Gustave Courbet, Paul Cézanne et Jean Hugo, mais aussi par la nature elle-même.";
     } else if (userInput.toLowerCase().includes("vendez-vous vos peintures")) {
-        responseMessage.textContent = "Artiste : Je peins pour moi, mais nous pouvons en discuter par email, gghenri@hotmail.fr.";
+        responseMessage.textContent = "Artiste : Je peins pour moi, mais nous pouvons en discuter au besoin.";
     } else if (userInput.toLowerCase().includes("que peignez-vous en ce moment")) {
         responseMessage.textContent = "Artiste : En ce moment, je peins mes paysages favoris, mais peut-être avec davantage de nostalgie. J'y intègre mes enfants, ma famille.";
     } else {
@@ -44,4 +44,6 @@ function sendMessage() {
     // Efface l'entrée de texte et fait défiler vers le bas pour voir le nouveau message
     document.getElementById("userInput").value = "";
     messagesDiv.scrollTop = messagesDiv.scrollHeight;
+}
+
 }
