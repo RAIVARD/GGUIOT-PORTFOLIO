@@ -122,8 +122,8 @@ header h1 {
     margin-bottom: 15px;
 }
 
-/* Positionnement de la chatbox en bas à droite */
-.chatbox {
+/* Style de la chatbox */
+.chatbot {
     position: fixed;
     bottom: 20px;
     right: 20px;
@@ -133,22 +133,22 @@ header h1 {
     width: 300px;
     border-radius: 8px;
     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3);
+    font-family: 'Arial', sans-serif;
 }
 
-.chatbox h2 {
+.chatbot h2 {
     font-size: 1.3em;
-    margin-bottom: 10px;
     color: #f1c40f;
+    margin-bottom: 10px;
 }
 
-.messages {
-    height: 100px;
+.chatbox-messages {
+    height: 150px;
     overflow-y: auto;
     background-color: #222;
     padding: 10px;
     border-radius: 4px;
     margin-bottom: 10px;
-    color: #fff;
 }
 
 #userInput {
@@ -171,4 +171,3 @@ button {
 button:hover {
     background-color: #ffda79;
 }
-
