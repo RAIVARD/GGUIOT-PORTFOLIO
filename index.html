@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="fr">
 <head>
@@ -24,39 +23,14 @@
 
     <!-- Carrousel de photos -->
     <div class="carousel">
-        <img src="IMG-20240909-WA0003.jpg" class="carousel-image" alt="Œuvre 1" style="display: block;">
-        <img src="IMG-20240909-WA0006.jpg" class="carousel-image" alt="Œuvre 2" style="display: none;">
-        <img src="IMG-20240909-WA0008.jpg" class="carousel-image" alt="Œuvre 3" style="display: none;">
-        <img src="IMG-20240909-WA0009.jpg" class="carousel-image" alt="Œuvre 4" style="display: none;">
+        <img src="IMG-20240909-WA0003.jpg" class="carousel-image" alt="Œuvre 1">
+        <img src="IMG-20240909-WA0006.jpg" class="carousel-image" alt="Œuvre 2">
+        <img src="IMG-20240909-WA0008.jpg" class="carousel-image" alt="Œuvre 3">
+        <img src="IMG-20240909-WA0009.jpg" class="carousel-image" alt="Œuvre 4">
 
         <!-- Flèches pour naviguer -->
         <button class="prev-button" onclick="prevImage()">←</button>
         <button class="next-button" onclick="nextImage()">→</button>
     </div>
-
-    <script>
-        // JavaScript pour faire fonctionner le carrousel
-        let currentIndex = 0;
-        const images = document.querySelectorAll('.carousel-image');
-
-        function showImage(index) {
-            images.forEach((img, i) => {
-                img.style.display = (i === index) ? 'block' : 'none';
-            });
-        }
-
-        function nextImage() {
-            currentIndex = (currentIndex + 1) % images.length;
-            showImage(currentIndex);
-        }
-
-        function prevImage() {
-            currentIndex = (currentIndex - 1 + images.length) % images.length;
-            showImage(currentIndex);
-        }
-
-        // Affiche la première image au chargement
-        showImage(currentIndex);
-    </script>
 </body>
 </html>
